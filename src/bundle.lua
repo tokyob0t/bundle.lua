@@ -285,6 +285,13 @@ local function bundle(entry_file, s)
 
     log("Processing entry file '" .. entry_file .. "'...")
     local entry_file_handle = io.open(entry_file, "r")
+    local first_line = entry_file_handle:read("*l")  -- leer la primera línea
+    local shebang 
+    if first_line and first_line:sub(1,2) == "#!" then
+        shebang = first_line
+    else
+        entry_file_handle:seek("set", 0)
+    end
     local entry_file_info = process_file(entry_file_handle)
     entry_file_handle:close()
 
@@ -294,6 +301,10 @@ local function bundle(entry_file, s)
     local output = ""
     local function write(str)
         output = output .. str
+    end
+
+    if shebang then
+        write(shebang .. "\n")
     end
 
     write("-- generated with bundle.lua\n")
