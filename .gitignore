@@ -7,3 +7,4 @@ luapack.bkp.lua/luarocks
 /lua_modules
 /.luarocks
 /venv/
+/*.src.rock

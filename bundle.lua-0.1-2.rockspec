@@ -1,10 +1,10 @@
 package = "bundle.lua"
-version = "0.1-1"
+version = "0.1-2"
 source = {
 	url = "git+ssh://git@github.com/tokyob0t/bundle.lua.git",
 }
 description = {
-	detailed = "Just copy the file `bundle.lua` inside the repo into your project.",
+	detailed = "A zero-dependency Lua utility to pack an entire project into one file.",
 }
 
 build = {
