@@ -1,8 +1,8 @@
 
-local path = require("src.path")
+local path = require("bundle.path")
 
 local function print_help_msg()
-    print("Usage: lua bundle.lua <entry file> [ options... ]")
+    print("bundle-lua <entry file> [ options... ]")
     print("Options:")
     print("    -i <include paths>       Sets the include paths to search for modules")
     print("                             * Note that the argument must be in the form of ")

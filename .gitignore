@@ -2,4 +2,8 @@ ftd
 out
 config.lua
 testfile.lua 
-luapack.bkp.lua
+luapack.bkp.lua/luarocks
+/lua
+/lua_modules
+/.luarocks
+/venv/

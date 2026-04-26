@@ -1,6 +1,6 @@
 
-local path = require("src.path")
-local generate_animal_hash = require("src.animal-hash")
+local path = require("bundle.path")
+local generate_animal_hash = require("bundle.animal-hash")
 
 local settings = {}
 
