@@ -171,7 +171,10 @@ local function process_file(f)
                         searching_for = search
                     else
                         if line:sub(i, i + 6) == "require" then
-                            table.insert(require_indices, #contents + 1)
+                            local prev = char_at(line, i - 1)
+                            if prev == "" or not prev:match("[%w_.:]") then
+                                table.insert(require_indices, #contents + 1)
+                            end
                         end
                         write(c)
                         i = i + 1
